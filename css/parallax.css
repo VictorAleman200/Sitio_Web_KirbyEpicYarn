@@ -1,0 +1,234 @@
+#parallax-container {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+#layer1 {
+    /*Debe de tenerlo cada imagen*/
+    position: absolute;
+    z-index: 1;
+    background-image: url('../img/textures/FondoAzul.jpg');
+    background-repeat: repeat;
+    background-size: 64px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    transition: .6s;
+}
+
+#layerBg {
+    position: absolute;
+    bottom: 20;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    filter: saturate(50%);
+    pointer-events: none;
+}
+
+#layerBg img {
+    position: absolute;
+    left: 0;
+    bottom: -30%;
+    width: 1920px;
+}
+
+
+#layer2 {
+    position: absolute;
+    z-index: 3;
+    bottom: -140px;
+    width: 100%;
+    height: 100%;
+    transition: .6s;
+    pointer-events: none;
+}
+
+.L {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.R {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#layer3 {
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    transition: .6s;
+    bottom: -70px;
+    pointer-events: none;
+}
+
+.nube {
+    top: 15px;
+}
+
+#layer4 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+    bottom: -150px;
+    width: 100%;
+    height: 25%;
+    transition: .6s;
+    pointer-events: none;
+}
+
+.centro {
+    position: absolute;
+    bottom: 0;
+}
+
+#layer5 {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 6;
+    bottom: 0;
+    left: -30px;
+    width: 100%;
+    height: 25%;
+    transition: .6s;
+    bottom: -60px;
+    pointer-events: none;
+}
+
+#layer6 {
+    position: absolute;
+    z-index: 7;
+    width: 100%;
+    height: 25%;
+    transition: .6s;
+    top: 0;
+    pointer-events: none;
+}
+
+#personajes {
+    display: flex;
+    position: absolute;
+    top: 500px;
+    z-index: 6;
+    height: auto;
+    width: 100%;
+    transition: 1s;
+}
+
+#personajes .R {
+    width: 220px;
+    right: 2%;
+    bottom: 25px;
+    animation: shake 1.5s infinite ease-out;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#personajes .L {
+    width: 180px;
+    left: 4%;
+    bottom: 30px;
+    animation: shake 1.5s infinite ease-out reverse;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#personajes .R:active{
+    translate: 0 -50px;
+}
+
+#personajes .L:active{
+    translate: 0 -50px;
+}
+
+#layer7 {
+    position: absolute;
+    z-index: 8;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: .6s;
+    pointer-events: none;
+}
+
+#layer8 {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    transition: .6s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width: 768px) {
+    #personajes .R {
+        width: 170px;
+        right: 2%;
+        bottom: 25px;
+    }
+
+    #personajes .L {
+        width: 150px;
+        left: 4%;
+        bottom: 30px;
+    }
+
+    #layer7 img {
+        height: 200px;
+    }
+    h1 {
+        font-size: 6rem;
+    }
+}
+
+@media(max-width: 480px) {
+    #layer2 {
+        bottom: -80px;
+    }
+
+    #layer2 img {
+        height: 300px;
+    }
+
+    #layer4 {
+        bottom: -100px;
+    }
+
+    #layer4 img {
+        height: 300px;
+    }
+
+    #personajes .R {
+        width: 130px;
+        right: 2%;
+        bottom: 30px;
+    }
+
+    #personajes .L {
+        width: 110px;
+        left: 4%;
+        bottom: 40px;
+    }
+
+    #layer6 img {
+        height: 130px;
+    }
+
+    #layer7 img {
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 4.8rem;
+    }
+}

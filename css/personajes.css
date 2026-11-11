@@ -1,0 +1,219 @@
+main {
+    background-image: url('../img/textures/BackgroundTile.jpg');
+    background-repeat: repeat;
+}
+
+.tarjetas-pj {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding: 50px 5px;
+    padding-bottom: 100px;
+    row-gap: 65px;
+}
+
+.pj {
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.pj:hover .act {
+    opacity: 1;
+}
+
+.fondo-pj {
+    background-image: url('../img/pjs/FondoPersonaje.jpg');
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.marco {
+    position: absolute;
+    width: 168px;
+    filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.5));
+}
+
+.act {
+    opacity: 0;
+    transition: .4s;
+}
+
+.pj-img {
+    width: 110px;
+    z-index: 3;
+}
+
+.pj-info {
+    position: absolute;
+    z-index: 1;
+    height: 140px;
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: .5s;
+}
+
+.Izq {
+    left: 0;
+}
+
+.info-act-left {
+    left: 140px;
+    opacity: 1;
+}
+
+.Der {
+    right: 0;
+}
+
+.info-act-right {
+    right: 140px;
+    opacity: 1;
+}
+
+.pj-info p {
+    font-size: 0.63rem;
+}
+
+.fila-btn {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+.fila-btn img {
+    width: 45px;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+    transition: 1s;
+    cursor: pointer;
+}
+
+.fila-btn img:active {
+    transform: rotate(180deg) scale(1.3);
+}
+
+.fila-btn.tablet, .fila-btn.pc  {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .tarjetas-pj {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 50px 5px;
+        padding-bottom: 100px;
+        row-gap: 90px;
+    }
+
+    .pj {
+        width: 180px;
+        height: 180px;
+    }
+
+    .marco {
+        width: 218px;
+    }
+
+    .pj-img {
+        width: 150px;
+    }
+
+    .pj-info {
+        height: 300px;
+        width: 180px;
+    }
+
+    .Izq,
+    .Der {
+        left: 0;
+        bottom: 0;
+    }
+
+    .info-act-left,
+    .info-act-right {
+        bottom: -300px;
+    }
+
+    .pj-info h3{
+        font-size: 2rem;
+    }
+
+    .pj-info p {
+        font-size: 0.9rem;
+    }
+
+    .fila-btn img {
+        width: 60px;
+    }
+
+    .fila-btn.tablet {
+        display: flex;
+    }
+
+    .fila-btn.movil {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .tarjetas-pj {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 80px 0;
+        padding-bottom: 150px;
+        row-gap: 120px;
+    }
+
+    .pj {
+        width: 200px;
+        height: 200px;
+    }
+
+    .marco {
+        width: 238px;
+    }
+
+    .pj-img {
+        width: 170px;
+    }
+
+    .pj-info {
+        height: 360px;
+        width: 200px;
+    }
+
+    .info-act-left,
+    .info-act-right {
+        bottom: -360px;
+    }
+
+    .pj-info h3{
+        font-size: 2rem;
+    }
+
+    .pj-info p {
+        font-size: 1.1rem;
+    }
+
+    .fila-btn img {
+        width: 70px;
+    }
+
+    .fila-btn.pc {
+        display: flex;
+    }
+
+    .fila-btn.movil, .fila-btn.tablet {
+        display: none;
+    }
+}

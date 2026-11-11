@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Quicksand:wght@300..700&display=swap');
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    animation: aparecer 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+html {
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: 'Quicksand';
+    position: relative;
+    font-size: 14px;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #f0f0f0;
+}
+
+p {
+    line-height: 1.4;
+}
+
+h1 {
+    font-family: 'Jaro';
+    font-size: 9rem;
+
+    background-image: url('../img/textures/FondoHeader.jpg');
+    background-size: cover;
+    background-position: center;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    -webkit-text-stroke: 2px #F1B73A;
+}
+
+h2 {
+    font-family: 'Jaro';
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-family: 'Jaro';
+    font-size: 1.5rem;
+    color: #FB6E92;
+    margin-bottom: 5px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 65px;
+    background-image: url('../img/textures/FondoHeader.jpg');
+    background-repeat: repeat;
+    background-size: 30px;
+    z-index: 20;
+}
+
+.header-content-pc {
+    display: none;
+}
+
+.header-content-pc a {
+    transition: 0.2s;
+}
+
+.header-content-pc a:hover {
+    color: #F1B73A;
+    scale: 1.05;
+}
+
+.sections a:hover img {
+    animation: shake 1s infinite ease-out;
+}
+
+.section-act {
+    color: #F1B73A;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 15px;
+}
+
+.header-content a {
+    transition: .5s;
+}
+
+.header-content a:hover {
+    rotate: 10deg;
+}
+
+.logo {
+    transition: .2s;
+}
+
+.logo:hover {
+    animation: shake .2s infinite ease-out;
+    scale: 1.05;
+}
+
+.header-deco {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    height: 30px;
+    background-image: url('../img/textures/TileKirby.png');
+    background-repeat: repeat;
+    background-size: 30px;
+}
+
+.oscurecer-fondo {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    background-color: black;
+    opacity: 0;
+    transition: 0.6s;
+    pointer-events: none;
+}
+
+.oscurecer-fondo.activo {
+    opacity: .3;
+    pointer-events: auto;
+}
+
+.header-menu {
+    position: fixed;
+    width: 50vw;
+    height: 100vh;
+    background-image: url('../img/textures/FondoHeader.jpg');
+    background-repeat: repeat;
+    background-size: 64px;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    transform: translateX(-101%);
+    padding-left: 6vw;
+    transition: 0.6s;
+}
+
+.header-menu.activo {
+    transform: translateX(0);
+}
+
+.header-menu h2 {
+    font-size: 5.5vw;
+}
+
+.imagen-header-menu {
+    width: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3vw;
+}
+
+.imagen-header-menu img {
+    height: 12vw;
+    transition: 0.6s;
+}
+
+.op-header-menu {
+    display: flex;
+    align-items: center;
+    height: 52px;
+    margin-bottom: 30px;
+}
+
+.op-header-menu:hover {
+    color: #F1B73A;
+}
+
+.op-header-menu:hover .imagen-header-menu img {
+    rotate: -10deg;
+}
+
+
+.op-header-menu:first-child {
+    margin-top: 60px;
+}
+
+.footer-header-menu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 88;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-header-menu-f {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.footer-header-menu a {
+    font-size: 0.6rem;
+}
+
+footer {
+    position: relative;
+    background-color: #2B2B2B;
+    height: 154px;
+    padding: 16px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+    margin-top: auto;
+}
+
+.fila-deco {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.fila-deco img {
+    transition: .2s;
+    cursor: pointer;
+}
+
+.fila-deco img:active {
+    animation: shake .2s infinite ease-out;
+    scale: 1.2;
+}
+
+footer p {
+    font-size: 0.8rem;
+    color: #f0f0f0;
+    text-align: center;
+}
+
+.fila-legal {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.fila-legal a {
+    font-size: 0.6rem;
+    color: #f0f0f0;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.fila-legal a:hover {
+    color: #FF5B5D;
+}
+
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .header-menu {
+        display: none;
+    }
+
+    .oscurecer-fondo {
+        display: none;
+    }
+
+    .header-content {
+        display: none;
+    }
+
+    .header-content-pc {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 2.6vh;
+        margin-top: 8px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .sections {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: auto;
+        gap: 2.6vh;
+    }
+
+    .section {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .langIcon {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: 2.6vh;
+    }
+
+    footer {
+        padding-top: 25px;
+    }
+
+    .fila-deco {
+        justify-content: center;
+        gap: 40px;
+    }
+
+    footer p {
+        font-size: 1rem;
+        color: #f0f0f0;
+        text-align: center;
+    }
+
+    .fila-legal a {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header-content-pc {
+        padding: 0 10vh;
+    }
+
+    .langIcon {
+        margin-left: 10vh;
+    }
+
+    .fila-deco {
+        gap: 80px;
+    }
+
+    .fila-legal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        margin-top: auto;
+    }
+}
