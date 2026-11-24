@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kirby's Epic Yarn</title>
-    <link rel="icon" type="image/png" href="./img/header/kirbyEstandar.png"/>
+    <link rel="icon" type="image/png" href="./img/header/kirbyEstandar.png" />
     <link rel="stylesheet" href="css/estandarizacion/reset.css">
     <link rel="stylesheet" href="css/estandarizacion/normalize.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/parallax.css">
     <link rel="stylesheet" href="css/indexStyle.css">
+    <link rel="stylesheet" href="css/cookieStyle.css">
+    <link rel="stylesheet" href="css/cookies.css">
 </head>
 
 <body>
@@ -21,7 +23,7 @@
             <a class="burgerIcon"><img src="./img/header/hamIcon.png" alt="Menu desplegable" height="38"></a>
             <a class="logo" href="./index.html"><img src="./img/header/kirbyEstandar.png" alt="Kirby Epic´s Yarn"
                     height="55"></a>
-            <a class="langIcon"><img src="./img/header/langIcon.png" alt="Idioma" height="31"></a>
+            <a class="langIcon"><img src="./img/header/profileIcon.png" alt="Iniciar sesión" height="48"></a>
         </div>
         <div class="header-content-pc">
             <a class="logo" href="./index.html"><img src="./img/header/kirbyEstandar.png" alt="Kirby Epic´s Yarn"
@@ -45,8 +47,7 @@
                 </a>
             </div>
             <a class="langIcon">
-                <img src="./img/header/langIcon.png" alt="Idioma" height="31">
-                <h2>ES</h2>
+                <img src="./img/header/profileIcon.png" alt="Iniciar sesión" height="55">
             </a>
         </div>
         <div class="header-deco"></div>
@@ -93,29 +94,6 @@
             </div>
         </div>
     </div>
-
-    <!--
-    <div id="cookies">
-        <div class="img-cookies">
-            <img src="./img/parallax/kirbyEstandar.png" alt="Kirby">
-        </div>
-
-        <div class="txt-cookies">
-            <h4>Utilizamos cookies</h4>
-            <p>Utilizamos cookies propias y de terceros para que nuestro sitio web funcione de manera segura para
-                analizar el tráfico y darte la mejor experiencia.
-                Puedes aceptar todas las cookies pulsando "Aceptar todo", rechazar las no esenciales haciendo clic en
-                "Rechazar", o personalizar tus preferencias en "Configurar". Para más información, consulta nuestra
-                [Política de Cookies].</p>
-        </div>
-        <div class="btns-cookies">
-            <div class="superior">
-                <button></button>
-                <button></button>
-            </div>
-        </div>
-    </div>
-    -->
 
     <div id="parallax-container">
 
@@ -270,6 +248,34 @@
         </div>
     </footer>
 
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-labelledby="cookie-titulo" hidden>
+        <div class="cookie-content">
+            <img class="cookie-logo" src="./img/header/kirbyEstandar.png" alt="">
+            <div class="cookie-text">
+                <h2 id="cookie-titulo">Utilizamos cookies</h2>
+                <p>
+                    Utilizamos cookies propias y de terceros para que nuestro sitio web funcione de manera segura
+                    para analizar el tráfico y darte la mejor experiencia. Puedes aceptar todas las cookies pulsando
+                    "Aceptar todo", rechazar las no esenciales haciendo clic en "Rechazar", o personalizar tus
+                    preferencias en "Configurar". Para más información, consulta nuestra
+                    <a href="">Política de Cookies</a>.
+                </p>
+            </div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn aceptar" type="button">Aceptar</button>
+                <button class="cookie-btn rechazar" type="button">Rechazar</button>
+                <button class="cookie-btn configurar" type="button" aria-expanded="false">Configurar</button>
+            </div>
+            <div class="cookie-config">
+                <label><input type="checkbox" checked disabled> Necesarias (siempre activas)</label>
+                <label><input type="checkbox" id="cookie-analiticas"> Analíticas</label>
+                <label><input type="checkbox" id="cookie-marketing"> Marketing</label>
+                <button class="cookie-btn guardar" type="button">Guardar preferencias</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/scriptCookies.js"></script>
     <script src="./js/scriptParallax.js"></script>
     <script src="./js/scriptMenu.js"></script>
 
