@@ -40,6 +40,16 @@ body {
     font-size: 2rem;
 }
 
+.topHeader-btns {
+    color: #ff9100;
+    font-weight: bold;
+}
+
+.header-opc {
+    display: flex;
+    gap: 50px;
+}
+
 .cartLink {
     display: flex;
     align-items: center;
@@ -78,7 +88,7 @@ body {
     flex-direction: column;
     gap: 12px;
     width: 240px;
-    height: 380px;
+    height: 400px;
     padding: 20px;
     box-sizing: border-box;
     background: #f6f6f6;
@@ -105,7 +115,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 240px;
-    height: 380px;
+    height: 400px;
     padding: 20px;
     box-sizing: border-box;
     background: white;
@@ -141,6 +151,10 @@ body {
     color: #ff5874;
 }
 
+.priceButton {
+    color: #ff9100;
+}
+
 .mas-detalles {
     font-size: 18px;
     color: #551c36;
@@ -153,6 +167,7 @@ body {
 }
 
 @media (max-width: 575px) {
+
     .contentShop {
         grid-template-columns: minmax(0, 1fr);
         padding: 32px 16px;
@@ -198,6 +213,7 @@ body {
     margin: 3% auto;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
     padding: 40px 0;
+    height: auto;
 }
 
 .left,
@@ -218,6 +234,7 @@ body {
     max-width: 100%;
     height: auto;
     object-fit: contain;
+    cursor: pointer;
 }
 
 .productSubImages {
@@ -250,6 +267,10 @@ body {
     margin-top: 30px;
 }
 
+.btns {
+    color: #ff9100;
+}
+
 .cartLinkP {
     color: #ff7c92;
     font-weight: bold;
@@ -272,6 +293,7 @@ body {
     display: flex;
     justify-content: center;
     transition: .5s;
+    margin-bottom: 30px;
 }
 
 .btn-comprar:hover {
@@ -301,6 +323,7 @@ body {
     .productBox {
         flex-direction: column;
         width: calc(100% - 32px);
+
     }
 
     .left,
@@ -312,6 +335,12 @@ body {
 
     .productText {
         padding: 0;
+    }
+
+    .header-opc {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
     }
 }
 
@@ -341,4 +370,38 @@ body {
     gap: 24px;
     padding: 48px 8%;
     box-sizing: border-box;
+}
+
+.accordion {
+    font-size: 16px;
+}
+
+.accordion-flush .accordion-item {
+    padding-bottom: 3%;
+}
+
+.accordion-flush .accordion-header {
+    height: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff5874;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    border-radius: 8px;
+    border-bottom: 1px solid #ff5874;
+    transition: .3s;
+}
+
+.accordion-flush .accordion-header:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+.accordion-body {
+    padding: 20px 10px;
+    font-weight: normal;
+}
+
+.accordion-body strong {
+    color: #ff9100;
 }
